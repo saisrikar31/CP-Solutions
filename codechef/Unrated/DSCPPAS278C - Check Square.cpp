@@ -1,8 +1,9 @@
 import java.util.Scanner;
 
 public class Main {
-    public static boolean checkSquareSum(long c) {
-        long left = 0;
+    public static boolean checkSquareSum(long c)
+    {
+             long left = 0;
         long right = (long) Math.sqrt(c);
 
         while (left <= right) {
