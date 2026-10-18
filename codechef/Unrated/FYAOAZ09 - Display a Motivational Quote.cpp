@@ -3,10 +3,8 @@
 const express = require('express');
 const app = express();
 
-// Set the view engine to EJS
 app.set('view engine', 'ejs');
 
-// Array of motivational quotes
 const quotes = [
     "I am build upon the small things I do everyday and the end results are no more than a byproduct of that. - Shinsuke",
         "Strive not to be a success, but rather to be of value. - Albert Einstein",
@@ -14,7 +12,6 @@ const quotes = [
                 "Discipline is doing what you hate to do, but doing it like you love it. - Mike Tyson"
                 ];
 
-                // Display a random quote
                 app.get('/', (req, res) => {
                     const randomIndex = Math.floor(Math.random() * quotes.length);
                         const quote = quotes[randomIndex];
@@ -22,7 +19,6 @@ const quotes = [
                             res.render('quote', { quote });
                             });
 
-                            // Start the server
                             app.listen(3000, () => {
                                 console.log('Server is running on port 3000');
                                 });
@@ -36,6 +32,7 @@ const quotes = [
     </head>
     <body>
         <h1>Motivational Quote</h1>
-            <p>%= quote %></p>
+            <p><%= quote %></p>
             </body>
             </html>
+            
