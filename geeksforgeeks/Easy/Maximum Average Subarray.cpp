@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     public int findMaxAverage(List<Integer> arr, int k) {
         int sum = 0;
