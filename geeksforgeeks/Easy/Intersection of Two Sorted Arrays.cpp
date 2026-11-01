@@ -1,22 +1,24 @@
 
+import java.util.*;
+
 class Solution {
-    ArrayList<Integer> intersection(int[] a, int[] b) {
+    static ArrayList<Integer> intersection(int arr1[], int arr2[]) {
         ArrayList<Integer> result = new ArrayList<>();
 
         int i = 0, j = 0;
 
-        while (i < a.length && j < b.length) {
+        while (i < arr1.length && j < arr2.length) {
 
-            if (a[i] < b[j]) {
+            if (arr1[i] < arr2[j]) {
                 i++;
             }
-            else if (a[i] > b[j]) {
+            else if (arr1[i] > arr2[j]) {
                 j++;
             }
             else {
                 if (result.isEmpty() ||
-                    result.get(result.size() - 1) != a[i]) {
-                    result.add(a[i]);
+                    result.get(result.size() - 1) != arr1[i]) {
+                    result.add(arr1[i]);
                 }
 
                 i++;
@@ -27,3 +29,4 @@ class Solution {
         return result;
     }
 }
+
